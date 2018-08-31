@@ -4,6 +4,6 @@
     <string name="button_text">Tell Joke</string>
     <string name="action_settings">Settings</string>
 
-    <!--Google-provided test ad units: Banner-->
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+<!--    &lt;!&ndash;Google-provided test ad units: Banner&ndash;&gt;
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
 </resources>
