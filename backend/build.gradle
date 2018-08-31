@@ -40,4 +40,4 @@ dependencies {
 * Date:
 * Name:
 * */
-appengine.tools.cloudSdkHome= "/home/galemu00/Documents/GCE/google-cloud-sdk"
+appengine.tools.cloudSdkHome= "<path-to-goole-cloud-sdk>"
