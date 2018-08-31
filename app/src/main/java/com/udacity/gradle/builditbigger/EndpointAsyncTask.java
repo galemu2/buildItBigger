@@ -1,12 +1,9 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.example.jokelibraryandroid.MainJokeActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
@@ -17,12 +14,13 @@ import java.io.IOException;
 
 public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
 
-
+    public static String newJoke ="";
     Context mContext;
 
     public EndpointAsyncTask(Context context) {
         buildApiService();
         this.mContext = context;
+
      }
 
     private static final String TAG = EndpointAsyncTask.class.getSimpleName();
@@ -62,16 +60,11 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String s) {
-        if(s!=null&& !s.isEmpty()) {
-            Intent intent = new Intent(mContext, MainJokeActivity.class);
-            intent.putExtra(MainJokeActivity.PASSED_JOKE, s);
-            mContext.startActivity(intent);
-        } else {
-            Toast.makeText(mContext, "problem with backend", Toast.LENGTH_SHORT).show();
-        }
+        newJoke = s;
         Log.d(TAG, "out: " + s);
-        mContext=null;
+
     }
+
 
 
 }

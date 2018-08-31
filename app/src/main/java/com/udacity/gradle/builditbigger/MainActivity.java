@@ -1,10 +1,14 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
+
+import com.example.jokelibraryandroid.MainJokeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view) {
         new EndpointAsyncTask(this).execute();
+
+        if (!EndpointAsyncTask.newJoke.isEmpty()) {
+
+            Intent intent = new Intent(this, MainJokeActivity.class);
+            intent.putExtra(MainJokeActivity.PASSED_JOKE, EndpointAsyncTask.newJoke);
+
+            startActivity(intent);
+            EndpointAsyncTask.newJoke = "";
+
+
+        } else {
+            Toast.makeText(this, "try again", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
