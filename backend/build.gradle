@@ -35,9 +35,9 @@ dependencies {
     implementation project(':JokeLibraryJava')
 }
 
-/*TODO Add path to google cloud SDK
+/*TODO Add path to google cloud SDK : <path-to-goole-cloud-sdk>
 * Source: https://stackoverflow.com/a/51029339/7504259
 * Date:
 * Name:
 * */
-appengine.tools.cloudSdkHome= "<path-to-goole-cloud-sdk>"
+appengine.tools.cloudSdkHome= "/home/galemu00/Documents/GCE/google-cloud-sdk"
