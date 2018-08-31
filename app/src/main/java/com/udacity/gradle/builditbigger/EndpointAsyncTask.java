@@ -39,7 +39,7 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
         try {
             return myApiService.sayHi(name).execute().getData();
         } catch (IOException e) {
-            Log.e(TAG, "--Error-- " + e.getMessage());
+            Log.e(TAG, "Error: " + e.getMessage());
             return "";
         }
     }
@@ -64,6 +64,7 @@ public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
 
     }
 
-
-
+    public static String getNewJoke() {
+        return newJoke;
+    }
 }
