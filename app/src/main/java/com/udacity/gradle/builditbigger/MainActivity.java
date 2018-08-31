@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        new EndpointAsyncTask(this).execute();
+        new EndpointAsyncTask( ).execute();
 
         if (!EndpointAsyncTask.newJoke.isEmpty()) {
 

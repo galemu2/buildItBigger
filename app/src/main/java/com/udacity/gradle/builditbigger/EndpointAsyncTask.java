@@ -1,6 +1,5 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -15,11 +14,11 @@ import java.io.IOException;
 public class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
 
     public static String newJoke ="";
-    Context mContext;
 
-    public EndpointAsyncTask(Context context) {
+
+    public EndpointAsyncTask( ) {
         buildApiService();
-        this.mContext = context;
+
 
      }
 
