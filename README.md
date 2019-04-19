@@ -1,4 +1,4 @@
-# Gradle for Android and Java Final Project
+# Gradle for Android and Java
  
 
 * Project contains a Java library for supplying jokes
